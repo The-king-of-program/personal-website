@@ -104,6 +104,14 @@
     .photo-detail img{display:block;max-width:100%;max-height:65svh;width:auto;height:auto;border:1px solid #8292a5;border-radius:12px;object-fit:contain}
     .dialog-about-list{padding-left:1.25em;margin:20px 0;color:#c5d0df;font-size:16px;line-height:1.9}.dialog-about-list li+li{margin-top:10px}
     @media(max-width:700px){.hero-description{font-size:16px;max-width:320px}.hero .pill{font-size:15px}.project-meta,.project-open{font-size:15px}.about-detail{padding:23px}.about-profile .english-name{font-size:15px}}
+    .contact-channels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}.contact-channel{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid #ffffff20;border-radius:16px;min-width:0;background:#ffffff08}.contact-icon{display:grid;place-items:center;width:40px;height:40px;flex:none;border-radius:12px;background:#ffffff0d;color:#c8d8e9}.contact-icon svg{width:23px;height:23px}.contact-channel strong,.contact-value{display:block}.contact-channel strong{font-size:16px;font-weight:500}.contact-value{font-size:14px;color:#aeb8c6;overflow-wrap:anywhere;margin-top:4px}.contact-channel>a{margin-left:auto;font-size:20px}
+    @media(max-width:700px){.explore-section{padding:55px 0 70px}.explore-stage{height:auto;display:block}.explore-center{width:100%;margin:0 auto 32px}.explore-center h2{font-size:clamp(46px,12vw,60px)}.explore-center p{max-width:100%}#exploration-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.exploration,.exploration.e1,.exploration.e2,.exploration.e3,.exploration.e4,.exploration.e5,.exploration.e6{position:relative;inset:auto;width:100%;transform:none;translate:none!important;opacity:1;aspect-ratio:1;border-radius:14px}.contact-channels{grid-template-columns:1fr}}
+    .explore-center h2{white-space:nowrap;font-size:clamp(42px,5.3vw,72px);letter-spacing:0}.explore-center p{max-width:none;white-space:nowrap;font-size:clamp(12px,1.1vw,16px)}
+    @media(max-width:700px){.explore-center h2{font-size:clamp(34px,10vw,60px)}.explore-center p{font-size:clamp(12px,3.6vw,15px)}}
+
+    .brand{overflow:hidden}.brand img{width:100%;height:100%;object-fit:cover;display:block}
+    .dialog-content .photo-subtitle{font-size:16px;color:#aebed0;margin:8px 0 0}.photo-quote{margin:24px 0 4px;padding:18px 22px;border-left:2px solid #89aacc;background:#ffffff08;border-radius:0 12px 12px 0}.dialog-content .photo-quote p{font-size:18px;color:#e3e9f1;margin:0;line-height:1.7}.photo-quote footer{margin-top:10px;color:#a3b3c7;font-size:13px}.photo-quote a{text-decoration:underline;text-underline-offset:3px}
+    .resume-english{display:block;margin-top:8px;color:#aeb8c6;font:italic 18px var(--display)}
   </style>
 </head>
 <body>
@@ -117,7 +125,7 @@
   </div>
   <header class="nav-shell">
     <nav class="nav" aria-label="主导航">
-      <a href="#home" class="brand" id="brand" aria-label="返回首页">HC</a>
+      <a href="#home" class="brand" id="brand" aria-label="返回首页"><img src="./avatar.jpg" alt="" decoding="async"></a>
       <span class="divider brand-divider" aria-hidden="true"></span>
       <a href="#home" class="nav-link active" data-nav="home" aria-current="page">首页</a>
       <a href="#work" class="nav-link" data-nav="work">作品</a>
@@ -136,43 +144,34 @@
         <h1 id="hero-name">Himson Chung</h1>
         <p class="role-line" id="role-line">初创者 / <span class="role-word" id="role-word">AI Agent</span></p>
         <p class="hero-description" id="hero-description">我是一位关注多个领域的初创者。这里展示我的作品，以及在创客、Agent 与机器人领域的探索。</p>
-        <div class="hero-actions"><a class="pill primary" href="#work">浏览作品 <span aria-hidden="true">↘</span></a><a class="pill" href="#contact">联系我 <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="pill primary" href="#work">浏览作品 <span aria-hidden="true">↘</span></a><button class="pill" id="hero-contact">联系我 <span aria-hidden="true">↗</span></button></div>
       </div>
       <p class="hero-note" id="preview-note">预览稿 · 个人信息待补充</p>
       <a href="#work" class="scroll-hint" aria-label="向下浏览实战与经历"><span>向下探索</span><span class="scroll-line" aria-hidden="true"></span></a>
       <button class="motion-toggle" id="motion-toggle" aria-pressed="false" aria-label="暂停动态效果"><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-text">暂停动态</span></button>
     </section>
     <section class="wrap about section-rule" id="about" aria-labelledby="about-title">
-      <div class="about-intro"><h2 class="about-title" id="about-title">关于我<span>A little about me.</span></h2><div class="about-profile"><strong>钟子谦 <span class="english-name">Himson Chung</span></strong><span>Base 广州 · ENTJ</span><br><span>广州大学 · 机器人工程</span><br><span>大二 · GUIC 成员</span></div></div>
+      <div class="about-intro"><h2 class="about-title" id="about-title">关于我<span>A little about me.</span></h2><div class="about-profile"><strong>钟子谦 <span class="english-name">Himson Chung</span></strong><span>Base 广州 · ENTJ</span><br><span>广州大学 · 机器人工程</span><br><span>本科 · GUIC 成员 · 观境智能团队成员</span></div></div>
       <div class="about-details"><div class="about-detail" role="button" tabindex="0" aria-label="查看我关注的方向"><small>我关注的方向</small><p id="about-focus">机器人与 Agent</p><ul class="about-items"><li>机器人与具身智能</li><li>AI × 硬件</li><li>AI Agent 的实践</li></ul></div><div class="about-detail" role="button" tabindex="0" aria-label="查看我感兴趣的项目"><small>我感兴趣的项目</small><p>项目与实践</p><ul class="about-items"><li>JAKA π 具身机器人开发</li><li>AI Agent 实战开发</li><li>Microduck 机器人开发</li></ul></div><div class="about-detail" role="button" tabindex="0" aria-label="查看我的竞赛经历"><small>我的竞赛经历</small><p>赛事与活动</p><ul class="about-items"><li>2026 第二届世界人形机器人运动会</li><li>粤港澳大湾区创客 AI Agent 黑客松</li><li>1024WaytoAGI · Coding 周末</li></ul></div></div>
     </section>
     <section class="section work-section" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-heading"><div><span class="overline">Projects &amp; Experiences</span><h2 id="work-title">实战与经历</h2><p>这里将展示创客、Agent 工程与机器人算法方向的实践。</p></div><a class="pill" href="#explorations">更多探索 <span class="arrow" aria-hidden="true">↗</span></a></div>
-        <div class="filters" role="group" aria-label="按作品类型筛选"><button class="filter" data-filter="all" aria-pressed="true">全部作品</button><button class="filter" data-filter="robotics" aria-pressed="false">机器人</button><button class="filter" data-filter="agent" aria-pressed="false">AI Agent</button><button class="filter" data-filter="events" aria-pressed="false">赛事</button></div>
+        <div class="filters" role="group" aria-label="按作品类型筛选"><button class="filter" data-filter="all" aria-pressed="true">全部作品</button><button class="filter" data-filter="robotics" aria-pressed="false">机器人</button><button class="filter" data-filter="agent" aria-pressed="false">AI Agent</button><button class="filter" data-filter="events" aria-pressed="false">赛事</button><button class="filter" data-filter="hardware" aria-pressed="false">智能硬件</button></div>
         <div class="work-grid" id="work-grid"></div>
         <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
-        <p class="content-note">以上内容根据本人提供的信息整理。</p>
-      </div>
-    </section>
-    <section class="section" id="journal" aria-labelledby="journal-title">
-      <div class="wrap section-rule" style="padding-top:62px">
-        <div class="section-heading"><div><span class="overline">Recent thoughts</span><h2 id="journal-title">思考与记录</h2><p>把观察留下来，让想法慢慢长成自己的方法。</p></div><button class="pill" id="journal-toggle" aria-expanded="false" aria-controls="journal-list">全部文章 <span class="arrow" aria-hidden="true">↗</span></button></div>
-        <div class="journal-list" id="journal-list"></div>
-        <p class="content-note">示例文章可点击阅读，后续可替换为你的原创内容。</p>
       </div>
     </section>
     <section class="explore-section" id="explorations" aria-labelledby="explore-title">
       <div class="wrap explore-stage" id="explore-stage">
-        <div class="explore-center"><span class="overline">Moments &amp; Experiments</span><h2 id="explore-title">实验<br>与花絮</h2><p>记录探索、相聚与创作中的一些瞬间。</p></div>
+        <div class="explore-center"><span class="overline">Moments &amp; Experiments</span><h2 id="explore-title">实验&amp;花絮</h2><p>记录探索、相聚与创作中的一些瞬间。</p></div>
         <div id="exploration-items"></div>
-        <p class="explore-footnote">点击照片查看详情</p>
       </div>
     </section>
 
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="wrap"><div class="contact-main"><p class="contact-kicker">Let's make something matter.</p><h2 id="contact-title">让想法<br>成为作品。</h2><p class="contact-sub">从一次简单的交流，开始下一段创作。</p><button class="pill" id="contact-button">与我联系 <span class="arrow" aria-hidden="true">↗</span></button><span class="contact-help" id="contact-help">公开邮箱待补充</span></div>
-        <footer><div class="footer-bar"><div class="socials" id="socials"><a href="#work">查看作品</a><button class="back-top" id="footer-resume">个人简历</button><a href="#journal">阅读文章</a></div><span class="status"><span class="status-dot" aria-hidden="true"></span><span id="availability">合作状态待补充</span></span></div><div class="footer-bottom"><span id="copyright">© 2026 个人作品集 · 预览版本</span><button class="back-top" id="back-top">回到顶部 ↑</button></div></footer>
+      <div class="wrap"><div class="contact-main"><p class="contact-kicker">Let's make something matter.</p><h2 id="contact-title">让想法<br>成为作品。</h2><p class="contact-sub">从一次简单的交流，开始下一段创作。</p><button class="pill" id="contact-button">与我联系 <span class="arrow" aria-hidden="true">↗</span></button><span class="contact-help" id="contact-help">联系方式待补充</span></div>
+        <footer><div class="footer-bar"><div class="socials" id="socials"><a href="#work">查看作品</a><button class="back-top" id="footer-resume">个人简历</button><a href="#explorations">实验与花絮</a></div></div><div class="footer-bottom"><span id="copyright">© 2026 个人作品集 · 预览版本</span><button class="back-top" id="back-top">回到顶部 ↑</button></div></footer>
       </div>
     </section>
   </main>
@@ -184,14 +183,14 @@
        name: '你的姓名', initials: 'AB', roles: ['产品设计师', '开发者']
        links: [{ label: 'GitHub', url: 'https://github.com/你的用户名' }]
        resumeUrl 可使用同目录文件，如 './resume.pdf'。
-       示例项目位于 PROJECTS，示例文章位于 ARTICLES。 */
+       项目资料位于 PROJECTS。 */
     const PROFILE = {
       name: 'Himson Chung', initials: 'HC', tagline: '初创者',
       bio: '我是一位关注多个领域的初创者。这里展示我的作品，以及在创客、Agent 与机器人领域的探索。', city: '',
       roles: ['AI Agent', '机器学习', '具身智能'],
-      email: '', resumeUrl: '', availability: '',
+      email: 'himson0908@outlook.com', wechat: 'Hims_ZZQ0908', phone: '+86 13435813193', whatsapp: '+86 13435813193', x: '@Thekingofprgram', github: 'The-king-of-program', resumeUrl: '', availability: '',
       focus: '机器人与 Agent', experience: '', opportunity: '',
-      education: '', skills: '', links: []
+      education: '广州大学 · 穗港科创人才（智能机器人）实验班', skills: '机器人二次开发、AI Agent 开发', links: []
     };
 
     const $ = (s) => document.querySelector(s);
@@ -205,6 +204,7 @@
     /* Original vector illustrations, embedded directly in this file. */
     function artwork(kind, uid) {
       const g = name => `${uid}-${name}`;
+      if (kind === 'lemo') return '<img src="./LEMO/LEMO1.jpg" alt="次元柠响 LEMO 声光立排产品" decoding="async">';
       if (kind === 'competition') return '<img src="./robotgame_1.jpg" alt="机器人运动会项目照片" decoding="async">';
       if (kind === 'accounting') return '<img src="./OPC.jpg" alt="代账 AI Agent 项目开发画面" decoding="async">';
       if (kind === 'microduck') return `<img src="./${uid==='detail-project'?'duck.jpg':'duck_1.png'}" alt="Microduck 小鸭机器人项目照片" decoding="async">`;
@@ -252,22 +252,23 @@
     }
 
     const PROJECTS = [
-      {title:'JAKA π 人形机器人深度开发',subtitle:'下肢策略训练',category:'robotics',type:'机器人',art:'robotics',real:true,summary:'围绕 JAKA π 人形机器人的工业化应用，以及空地协同智能安防场景展开深度开发。',detail:'项目整体涉及人形机器人的工业化应用，以及空地协同智能安防场景。我主要负责机器人下肢策略训练，目标是让机器人能够应对不同高度的障碍物与道具，为更具挑战性的工业场景任务提供支持。目前已完成仿真训练，即将进行真机实测。',tags:['人形机器人','下肢策略训练','已完成仿真训练']},
+      {title:'JAKA π 人形机器人深度开发',subtitle:'观境智能 · 下肢策略训练',category:'robotics',type:'机器人',art:'robotics',real:true,summary:'围绕 JAKA π 人形机器人的工业化应用，以及空地协同智能安防场景展开深度开发。',detail:'项目整体涉及人形机器人的工业化应用，以及空地协同智能安防场景。我主要负责机器人下肢策略训练，目标是让机器人能够应对不同高度的障碍物与道具，为更具挑战性的工业场景任务提供支持。目前已完成仿真训练，即将进行真机实测。',tags:['观境智能','人形机器人','下肢策略训练','已完成仿真训练']},
       {title:'面向 OPC 的代账 AI Agent',subtitle:'月末与季末记账',category:'agent',type:'AI Agent',art:'accounting',real:true,summary:'面向 OPC 设计的代账 AI Agent，帮助处理月末与季末的记账工作，旨在减少记账所需的时间与成本。',detail:'这个项目面向 OPC 的月末和季末记账需求，目标是帮助使用者减少记账工作所需的时间和成本。我主要负责 Agent 框架开发和后端处理。目前项目仍在开发中，正在进行封装与测试。',tags:['AI Agent','Agent 框架','封装与测试中']},
       {title:'Microduck 机器人开发',subtitle:'具身智能教育机器人',category:'robotics',type:'机器人',art:'microduck',real:true,summary:'Microduck 是面向具身智能教育的小型机器人，用更小的智能硬件进行具身智能实战开发。',detail:'项目以 Microduck 小鸭机器人为载体。根据项目介绍，其大小脑结构与人形机器人的大小脑结构一致，让开发者能够在小型智能硬件上开展具身智能实践。我主要负责机器人组装、策略调试与 C 端销售。',tags:['具身智能教育','机器人组装','策略调试']},
-      {title:'2026 第二届世界人形机器人运动会',subtitle:'场景赛 · 消防救援岗',category:'events',type:'赛事',art:'competition',real:true,summary:'参加场景赛中的消防救援岗，赛事成绩为全球第 10 名。',detail:'在 2026 第二届世界人形机器人运动会中，参加场景赛消防救援岗，赛事成绩为全球第 10 名。我主要负责机器人算法开发与手臂训练。',tags:['消防救援岗','机器人算法开发','手臂训练','全球第 10 名']}
+      {title:'2026 第二届世界人形机器人运动会',subtitle:'场景赛 · 消防救援岗',category:'events',type:'赛事',art:'competition',real:true,summary:'参加场景赛中的消防救援岗，赛事成绩为全球第 10 名。',detail:'在 2026 第二届世界人形机器人运动会中，参加场景赛消防救援岗，赛事成绩为全球第 10 名。我主要负责机器人算法开发与手臂训练。',tags:['消防救援岗','机器人算法开发','手臂训练','全球第 10 名']},
+      {title:'基于 NE555 搭建的创意声光立牌',subtitle:'次元柠响 LEMO · 迭代新一代产品中',category:'hardware',type:'智能硬件',art:'lemo',real:true,summary:'次元柠响 LEMO 是一款基于 NE555、结合人物立牌与发光底座的创意声光立牌产品。',detail:'项目通过人物立牌与发光底座组合呈现不同的声光展示效果。我主要负责 3D 打印建模与制作、硬件电路焊接，以及实体拼装。目前正在迭代新一代产品。',tags:['次元柠响 LEMO','NE555','3D 打印','迭代新一代产品中']}
     ];
-    const ARTICLES = [
-      {title:'好的界面，从少一个选择开始',category:'体验观察',time:'约 2 分钟',art:'interface',paragraphs:['一个页面上的选择越多，用户就越需要花时间判断：哪一项与自己有关，哪一项又值得现在行动。做减法的起点，是确定这个页面最重要的任务。','在开始画按钮之前，先写下一句具体的话：谁来到这里，想完成什么？这句话会帮助你判断标题、图片和操作是否在解决同一个问题。','减少选择不等于隐藏一切。次要信息可以保留在详情里，主要行动则需要出现在容易理解的位置。做完之后，用一个实际任务走一遍页面，比只检查视觉整齐更能发现问题。']},
-      {title:'留白，也是设计的一部分',category:'设计手记',time:'约 2 分钟',art:'architecture',paragraphs:['留白让内容之间的关系变得可见。距离较近的信息通常会被理解为一组，距离较远的信息则更容易被理解为不同部分。','在作品集里，给图片足够的呼吸空间，可以让访客先看见作品，再阅读说明。标题和描述之间的间距，则可以提示两者属于同一个项目。','调整留白时，先看阅读顺序，再看几何数值是否一致。真正需要一致的是信息关系，而非每一处空隙都恰好相同。']},
-      {title:'把一次视觉实验，变成一个起点',category:'创作过程',time:'约 2 分钟',art:'bloom',paragraphs:['小实验不一定要解决完整的问题。它可以只回答一个很小的疑问：同一个形状换一种材质会怎样？重复排列以后，会产生什么节奏？','给自己一个约束会让探索更具体。例如只用两种颜色，或者只允许改变一个参数。这样更容易看见每一次变化带来的结果。','保存过程中的不同版本，并给每个版本写一句观察。下次遇到合适的项目时，这些记录就可能成为一个可用的起点。']},
-      {title:'作品集，如何讲清楚你的贡献',category:'作品整理',time:'约 2 分钟',art:'type',paragraphs:['一张完成度很高的截图，可以展示审美，却不一定能解释你在项目里做了什么。好的项目介绍应该把背景、职责和决策串起来。','先说明问题，再说明你的责任范围。团队项目尤其需要区分个人工作与团队结果。随后挑选一两个关键决策，解释为什么这样做、放弃了什么，以及观察到了什么。','结果不一定必须是一个百分比。真实的用户反馈、交付状态、流程改进，或明确记录的局限，都比无法核实的漂亮数字更有价值。']}
+    const EXPLORATIONS = [
+      {src:'./person_1.jpg',title:'北京·颐和园',subtitle:'',quote:'求知若饥，虚心若愚。',author:'《全球概览》 · 史蒂夫·乔布斯',source:'https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says'},
+      {src:'./person_2.jpg',title:'北京·国家速滑馆（冰丝带）',subtitle:'2026第二届世界人形机器人运动会',quote:'要有所发明，就必须进行实验。',author:'杰夫·贝索斯',source:'https://www.aboutamazon.com/news/policy-news-views/statement-by-jeff-bezos-to-the-u-s-house-committee-on-the-judiciary'},
+      {src:'./person_3.jpg',title:'北京·颐和园',subtitle:'',quote:'永远相信美好的事情即将发生。',author:'雷军',source:'https://s1.mi.com/m/shopnews/?nid=100601'},
+      {src:'./person_6.jpg',title:'北京·国家速滑馆（冰丝带）',subtitle:'2026第二届世界人形机器人运动会',quote:'不要做无所不知的人，要做不断学习的人。',author:'萨提亚·纳德拉',source:'https://news.microsoft.com/apac/2019/05/06/learn-include-empower-grow-how-change-transformation-is-our-new-reality/'},
+      {src:'./person_5.jpg',title:'上海·闵行开发区',subtitle:'JAKA机器人二次开发',quote:'当我们拥有优秀的企业时，最喜欢的持有期限是永远。',author:'沃伦·巴菲特',source:'https://www.berkshirehathaway.com/letters/1988.html'},
+      {src:'./%E7%85%A7%E7%89%876.jpg',title:'广州·中山大学',subtitle:'1024WaytoAGI·Coding周末',quote:'价格是你付出的，价值是你得到的。',author:'本杰明·格雷厄姆',source:'https://berkshirehathaway.com/letters/2008ltr.pdf'}
     ];
-    const EXPLORATIONS = Array.from({length:6},(_,i)=>({src:`./person_${i+1}.jpg`,title:`照片 ${i+1}`}));
 
     function renderContent() {
       $('#work-grid').innerHTML = PROJECTS.map((p,i)=>`<button class="project" ${p.art==='robotics'?'id="project-robot"':p.art==='accounting'?'id="project-agent"':''} data-project="${i}" data-category="${p.category}" aria-label="查看${p.real?'项目':'概念示例'}：${escapeHTML(p.title)}"><div class="project-image">${artwork(p.art,`p${i}`)}<div class="project-overlay"><span class="project-open">查看项目详情 ↗</span></div></div><div class="project-info"><div><h3 class="project-title">${escapeHTML(p.title)}</h3><p class="project-meta">${escapeHTML(p.subtitle)} / ${escapeHTML(p.type)}${p.real?'':' · 概念示例'}</p></div><span class="project-icon" aria-hidden="true">↗</span></div></button>`).join('');
-      $('#journal-list').innerHTML = ARTICLES.map((a,i)=>`<button class="journal-item ${i>1?'journal-extra':''}" data-article="${i}" ${i>1?'hidden':''}><span class="journal-thumb">${artwork(a.art,`j${i}`)}</span><span class="journal-copy"><h3>${escapeHTML(a.title)}</h3><p>示例文章 / ${a.time}</p></span><span class="journal-category">${a.category}</span><span class="arrow" aria-hidden="true">↗</span></button>`).join('');
       $('#exploration-items').innerHTML = EXPLORATIONS.map((e,i)=>`<button class="exploration e${i+1}" data-exploration="${i}" aria-label="查看${escapeHTML(e.title)}"><img src="${e.src}" alt="" loading="lazy" decoding="async"></button>`).join('');
     }
     renderContent();
@@ -275,6 +276,7 @@
     const dialog = $('#detail-dialog'); let dialogTrigger;
     const jakaPhotos=[{src:'./JAKA-%CE%A0.jpg',alt:'JAKA π 项目团队与机器人合影'},{src:'./JAKA-%CE%A01.jpg',alt:'人与两台 JAKA π 机器人合影'},{src:'./JAKA-%CE%A02.jpg',alt:'JAKA π 机器人与现场工作人员'}];
     const competitionPhotos=Array.from({length:3},(_,i)=>({src:`./robotgame_${i+1}.jpg`,alt:`机器人运动会照片 ${i+1}`}));
+    const lemoPhotos=[{src:'./LEMO/LEMO1.jpg',alt:'次元柠响 LEMO 产品实拍'},{src:'./LEMO/LEMO2.png',alt:'次元柠响 LEMO 电路设计图'},{src:'./LEMO/LEMO3.png',alt:'次元柠响 LEMO 结构设计图'}];
     function galleryMarkup(photos,label){return `<div class="gallery" aria-label="${escapeHTML(label)}"><div class="gallery-frame"><img id="gallery-image" src="${photos[0].src}" alt="${escapeHTML(photos[0].alt)}"></div><div class="gallery-controls"><button type="button" data-gallery="prev" aria-label="上一张照片">‹</button><span class="gallery-count" id="gallery-count" role="status" aria-live="polite">1 / ${photos.length}</span><button type="button" data-gallery="next" aria-label="下一张照片">›</button></div></div>`;}
     let galleryIndex=0,activeGallery=jakaPhotos;
     dialog.addEventListener('click',e=>{const button=e.target.closest('[data-gallery]');if(!button)return;galleryIndex=(galleryIndex+(button.dataset.gallery==='next'?1:-1)+activeGallery.length)%activeGallery.length;const photo=activeGallery[galleryIndex],img=$('#gallery-image');img.src=photo.src;img.alt=photo.alt;$('#gallery-count').textContent=`${galleryIndex+1} / ${activeGallery.length}`;if(!reducedMotion.matches&&!motionPaused&&img.animate){img.getAnimations().forEach(animation=>animation.cancel());img.animate([{opacity:0,transform:`translateX(${button.dataset.gallery==='next'?16:-16}px)`},{opacity:1,transform:'translateX(0)'}],{duration:420,easing:'cubic-bezier(.22,.61,.36,1)'});}});
@@ -306,40 +308,44 @@
     dialog.addEventListener('close',()=>{closingDialog=false;dialog.classList.remove('is-closing');document.body.classList.remove('modal-open');if(dialogTrigger?.isConnected)dialogTrigger.focus({preventScroll:true});});
     $('#work-grid').addEventListener('click',e=>{
       const card=e.target.closest('[data-project]');if(!card)return;const p=PROJECTS[Number(card.dataset.project)];
-      galleryIndex=0;activeGallery=p.art==='competition'?competitionPhotos:jakaPhotos;
-      openDialog(p.real?`作品 / ${p.type}`:'作品 / 概念示例',`<h2 id="dialog-title">${escapeHTML(p.title)}</h2><p>${escapeHTML(p.summary)}</p><div class="detail-chips">${p.tags.map(t=>`<span>${escapeHTML(t)}</span>`).join('')}</div>${p.art==='robotics'||p.art==='competition'?galleryMarkup(activeGallery,`${p.title}照片`):p.art==='microduck'?`<div class="gallery"><div class="gallery-frame">${artwork(p.art,'detail-project')}</div></div>`:`<div class="dialog-art">${artwork(p.art,'detail-project')}</div>`}<h3>${p.real?'项目与个人职责':'关于这个示例'}</h3><p>${escapeHTML(p.detail)}</p>${p.real?'':'<div class="empty-hint">这是展示布局的概念示例。替换为真实项目时，请补充项目背景、你的贡献、过程材料与结果。</div>'}`,card);
+      galleryIndex=0;activeGallery=p.art==='competition'?competitionPhotos:p.art==='lemo'?lemoPhotos:jakaPhotos;
+      openDialog(p.real?`作品 / ${p.type}`:'作品 / 概念示例',`<h2 id="dialog-title">${escapeHTML(p.title)}</h2><p>${escapeHTML(p.summary)}</p><div class="detail-chips">${p.tags.map(t=>`<span>${escapeHTML(t)}</span>`).join('')}</div>${p.art==='robotics'||p.art==='competition'||p.art==='lemo'?galleryMarkup(activeGallery,`${p.title}照片`):p.art==='microduck'?`<div class="gallery"><div class="gallery-frame">${artwork(p.art,'detail-project')}</div></div>`:`<div class="dialog-art">${artwork(p.art,'detail-project')}</div>`}<h3>${p.real?'项目与个人职责':'关于这个示例'}</h3><p>${escapeHTML(p.detail)}</p>${p.real?'':'<div class="empty-hint">这是展示布局的概念示例。替换为真实项目时，请补充项目背景、你的贡献、过程材料与结果。</div>'}`,card);
     });
     document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
       document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       let count=0;document.querySelectorAll('[data-project]').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&card.dataset.category!==button.dataset.filter;if(!card.hidden)count++;});
       $('#filter-status').textContent=`${button.textContent}：显示 ${count} 个项目`;
     }));
-    $('#journal-list').addEventListener('click',e=>{const button=e.target.closest('[data-article]');if(!button)return;const a=ARTICLES[Number(button.dataset.article)];openDialog(`文章 / ${a.category}`,`<h2 id="dialog-title">${escapeHTML(a.title)}</h2><p class="muted">示例文章 · ${a.time}</p>${a.paragraphs.map(p=>`<p>${escapeHTML(p)}</p>`).join('')}<div class="empty-hint">以上内容为本页面编写的示例短文，不代表网站主人的观点或经历。</div>`,button);});
-    $('#journal-toggle').addEventListener('click',function(){const expanded=this.getAttribute('aria-expanded')!=='true';this.setAttribute('aria-expanded',String(expanded));document.querySelectorAll('.journal-extra').forEach(e=>e.hidden=!expanded);this.innerHTML=`${expanded?'收起文章':'全部文章'} <span class="arrow" aria-hidden="true">${expanded?'↑':'↗'}</span>`;});
-    $('#exploration-items').addEventListener('click',e=>{const button=e.target.closest('[data-exploration]');if(!button)return;const item=EXPLORATIONS[Number(button.dataset.exploration)];openDialog('实验与花絮',`<h2 id="dialog-title">${escapeHTML(item.title)}</h2><div class="photo-detail"><img src="${item.src}" alt="${escapeHTML(item.title)}" decoding="async"></div>`,button);});
+    $('#exploration-items').addEventListener('click',e=>{const button=e.target.closest('[data-exploration]');if(!button)return;const item=EXPLORATIONS[Number(button.dataset.exploration)];openDialog('实验与花絮',`<h2 id="dialog-title">${escapeHTML(item.title)}</h2>${item.subtitle?`<p class="photo-subtitle">${escapeHTML(item.subtitle)}</p>`:''}<div class="photo-detail"><img src="${item.src}" alt="${escapeHTML(item.title)}" decoding="async"></div><blockquote class="photo-quote"><p>“${escapeHTML(item.quote)}”</p><footer>— ${escapeHTML(item.author)}</footer></blockquote>`,button);});
 
     function showResume(trigger) {
-      const rows = [['姓名',PROFILE.name],['个人定位',PROFILE.tagline],['所在城市',PROFILE.city],['关注方向',PROFILE.focus],['工作经历',PROFILE.experience],['教育经历',PROFILE.education],['主要技能',PROFILE.skills]];
-      const resumeURL = safeURL(PROFILE.resumeUrl,true);
-      openDialog('关于我 / 简历',`<h2 id="dialog-title">${PROFILE.name?escapeHTML(PROFILE.name)+'的简历':'关于你的下一页'}</h2><p>${escapeHTML(PROFILE.bio||'简历信息尚待补充。这里将帮助访客了解你的经历、技能与工作方向。')}</p><dl class="resume-list">${rows.map(([label,value])=>`<div class="resume-row"><dt>${label}</dt><dd>${escapeHTML(value||'待补充')}</dd></div>`).join('')}</dl>${resumeURL?`<div class="dialog-actions"><a class="pill primary" href="${escapeHTML(resumeURL)}" target="_blank" rel="noopener noreferrer">打开简历文件 ↗</a></div>`:'<div class="empty-hint">简历文件尚未提供。补充 PDF 后，这里会显示文件入口。</div>'}`,trigger);
+      const rows = [['姓名','钟子谦·Himson Chung'],['所在城市','广州'],['关注方向',PROFILE.focus],['教育经历',PROFILE.education],['主要技能',PROFILE.skills]];
+      openDialog('关于我 / 简历',`<h2 id="dialog-title">关于我</h2><span class="resume-english">About me</span><p>${escapeHTML(PROFILE.bio||'简历信息尚待补充。这里将帮助访客了解你的经历、技能与工作方向。')}</p><dl class="resume-list">${rows.map(([label,value])=>`<div class="resume-row"><dt>${label}</dt><dd>${escapeHTML(value||'待补充')}</dd></div>`).join('')}</dl>`,trigger);
     }
     $('#resume-button').addEventListener('click',e=>showResume(e.currentTarget));$('#footer-resume').addEventListener('click',e=>showResume(e.currentTarget));
     const validEmail = value => /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(value) && !/[\r\n?#]/.test(value);
     function showContact(trigger) {
-      const email = validEmail(PROFILE.email) ? PROFILE.email : '';
-      openDialog('建立联系',`<h2 id="dialog-title">让交流从这里开始。</h2>${email?`<p>可以通过下面的公开邮箱联系我。</p><p><a class="inline-link" href="mailto:${encodeURIComponent(email)}">${escapeHTML(email)}</a></p><div class="dialog-actions"><a class="pill primary" href="mailto:${encodeURIComponent(email)}">打开邮件应用 ↗</a><button class="pill" id="copy-email">复制邮箱</button></div><p id="copy-status" role="status" aria-live="polite" style="margin-top:16px"></p>`:'<p>公开联系邮箱尚未填写。填写后，这里将提供邮件入口与邮箱复制功能。</p><div class="empty-hint">网站主人可以在配套的《个人信息补充清单.md》中填写邮箱、社交主页和合作方向。</div>'}`,trigger);
-      $('#copy-email')?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(email);$('#copy-status').textContent='邮箱已复制。';}catch{$('#copy-status').textContent='当前浏览器无法自动复制，请选中上方邮箱手动复制。';}});
+      const icon = {
+        wechat:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 3C4.6 3 1 5.9 1 9.5c0 2 1.1 3.8 2.9 5l-.6 2.2 2.7-1.3c.9.3 1.9.5 3 .5h.5a5.9 5.9 0 0 1-.3-1.8c0-3.3 3-6 6.8-6h.3C15.5 5.2 12.5 3 9 3Zm-2.5 4a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6Zm5 0a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6Zm4.5 2.5c-3.3 0-6 2.1-6 4.8s2.7 4.8 6 4.8c.8 0 1.6-.1 2.3-.4l2.3 1.1-.5-1.9c1.3-.9 1.9-2.2 1.9-3.6 0-2.7-2.7-4.8-6-4.8Zm-2 2.8a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4Zm4 0a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4Z"/></svg>',
+        phone:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 2.8 9.5 7 7.8 9c1.4 2.9 3.5 5 6.4 6.4l2-1.7 4.2 2.9-.5 3.5c-.1.7-.8 1.2-1.5 1.2C9.8 20.8 3.2 14.2 2.7 5.6c0-.7.5-1.4 1.2-1.5l2.7-1.3Z"/></svg>',
+        whatsapp:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.7 15l-1.1 4.8 4.9-1.2A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.4-.2-2.6.6.6-2.5-.3-.5A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-1.3-.6-2.2-1.4-2.9-2.7-.1-.2 0-.3.1-.5l.4-.5c.1-.2.2-.3.1-.5l-.6-1.5c-.1-.3-.3-.3-.5-.3h-.4c-.2 0-.5.1-.7.3-.7.7-.9 1.6-.5 2.6.6 1.7 2.5 3.9 4.8 4.8 1.9.8 2.8.7 3.5-.4.2-.4.3-1 .2-1.1 0-.2-.1-.2-.3-.3Z"/></svg>',
+        x:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.9-7.3L5.7 22H2.5l7.2-8.3L1.8 2h6.4l4.4 6.7L18.9 2Zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20Z"/></svg>',
+        github:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.07c-3.1.67-3.75-1.32-3.75-1.32-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.14-2.98-.11-.28-.49-1.42.11-2.95 0 0 .93-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.6 1.53.22 2.67.11 2.95.71.78 1.14 1.77 1.14 2.98 0 4.27-2.6 5.22-5.08 5.49.4.35.75 1.02.75 2.05V22c0 .29.2.64.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>',
+        email:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 5h20v14H2V5Zm2 2v.4l8 5.2 8-5.2V7l-8 5L4 7Zm16 10V9.8l-8 5.1-8-5.1V17h16Z"/></svg>'
+      };
+      const email=validEmail(PROFILE.email)?PROFILE.email:'';
+      const channels=[['wechat','微信',PROFILE.wechat],['phone','电话',PROFILE.phone],['whatsapp','WhatsApp',PROFILE.whatsapp],...(PROFILE.x?[['x','X',PROFILE.x]]:[]),['email','Outlook 邮箱',email],['github','GitHub',PROFILE.github]];
+      const cards=channels.map(([key,label,value])=>`<div class="contact-channel"><span class="contact-icon">${icon[key]}</span><span><strong>${escapeHTML(label)}</strong><span class="contact-value">${value?escapeHTML(value):'待补充'}</span></span></div>`).join('');
+      openDialog('建立联系',`<h2 id="dialog-title">让交流从这里开始。</h2><p>欢迎通过以下方式与我联系。</p><div class="contact-channels">${cards}</div>`,trigger);
     }
     $('#contact-button').addEventListener('click',e=>showContact(e.currentTarget));
+    $('#hero-contact').addEventListener('click',e=>showContact(e.currentTarget));
 
     function applyProfile() {
       if(PROFILE.name){$('#hero-name').textContent=PROFILE.name;if(/[\u3400-\u9fff]/.test(PROFILE.name))$('#hero-name').classList.add('cjk-name');document.title=`${PROFILE.name} · 个人作品集`;document.querySelector('meta[name="description"]').content=PROFILE.bio||`${PROFILE.name}的个人作品集`;$('#preview-note').textContent='个人作品集 / 2026';$('#copyright').textContent=`© 2026 ${PROFILE.name}`;}
-      $('#brand').textContent=PROFILE.initials||'YN';if(PROFILE.bio)$('#hero-description').textContent=PROFILE.bio;
+      if(PROFILE.bio)$('#hero-description').textContent=PROFILE.bio;
       ['focus','experience','opportunity'].forEach(key=>{const target=$(`#about-${key}`);if(PROFILE[key]&&target)target.textContent=PROFILE[key];});
-      if(PROFILE.availability)$('#availability').textContent=PROFILE.availability;
-      if(validEmail(PROFILE.email)){$('#contact-help').textContent=PROFILE.email;$('#contact-button').firstChild.textContent='发送邮件 ';}
-      const links=Array.isArray(PROFILE.links)?PROFILE.links.filter(link=>safeURL(link.url)):[];
-      if(links.length)$('#socials').innerHTML=links.map(link=>`<a href="${escapeHTML(safeURL(link.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(link.label)}</a>`).join('');
+      if(validEmail(PROFILE.email)){$('#contact-help').textContent=PROFILE.email;}
       if(PROFILE.tagline){const role=$('#role-word');$('#role-line').replaceChildren();const intro=document.createElement('span');intro.textContent=PROFILE.tagline;$('#role-line').append(intro);if(role){$('#role-line').append(document.createTextNode(' / '),role);}if(PROFILE.city){const city=document.createElement('span');city.textContent=`，现居${PROFILE.city}`;$('#role-line').append(city);}}
       else if(PROFILE.name||PROFILE.city){$('#role-line').prepend(document.createTextNode(PROFILE.roles[0]==='身份待补充'?'':'一位 '));if(PROFILE.city){const city=document.createElement('span');city.textContent=`，现居${PROFILE.city}`;$('#role-line').append(city);}}
       if($('#role-word'))$('#role-word').textContent=PROFILE.roles.filter(Boolean)[0]||'创作者';
@@ -362,7 +368,7 @@
 
     let scrollPending=false;
     const trackedSections=['home','work','contact'].map(id=>document.getElementById(id));
-    function updateScroll(){scrollPending=false;$('.nav').classList.toggle('scrolled',scrollY>100);let active='home';for(const section of trackedSections){if(section.getBoundingClientRect().top<=innerHeight*.45)active=section.id;}document.querySelectorAll('[data-nav]').forEach(link=>{const selected=link.dataset.nav===active;link.classList.toggle('active',selected);if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});if(!motionPaused){const r=$('#explore-stage').getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const amount=Math.max(-1,Math.min(1,(innerHeight/2-(r.top+r.height/2))/innerHeight));document.querySelectorAll('.exploration').forEach((el,i)=>{el.style.translate=`0 ${amount*(i%2?42:-42)}px`;});}}}
+    function updateScroll(){scrollPending=false;$('.nav').classList.toggle('scrolled',scrollY>100);let active='home';for(const section of trackedSections){if(section.getBoundingClientRect().top<=innerHeight*.45)active=section.id;}document.querySelectorAll('[data-nav]').forEach(link=>{const selected=link.dataset.nav===active;link.classList.toggle('active',selected);if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});if(!motionPaused&&innerWidth>700){const r=$('#explore-stage').getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const amount=Math.max(-1,Math.min(1,(innerHeight/2-(r.top+r.height/2))/innerHeight));document.querySelectorAll('.exploration').forEach((el,i)=>{el.style.translate=`0 ${amount*(i%2?42:-42)}px`;});}}}
     window.addEventListener('scroll',()=>{if(!scrollPending){scrollPending=true;requestAnimationFrame(updateScroll);}},{passive:true});updateScroll();
     $('#back-top').addEventListener('click',()=>{window.scrollTo({top:0,behavior:reducedMotion.matches?'instant':'smooth'});$('#brand').focus({preventScroll:true});});
   </script>
